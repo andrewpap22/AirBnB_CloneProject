@@ -1,0 +1,13 @@
+//jquery to find the particular id and render that item so the delete function will work.
+$('#photos').html("<%= j render 'photos_list' %>")
+//checking with jquery again if after photo deletion all photos are deleted
+//then immediatly (without refreshing the page) remove the checkmark on photos tab
+<% if @room.photos.blank? %>
+  $('#photo_check').hide();
+<% end %>
+
+<% if !@room.active && !@room.price.blank? && !@room.listing_name.blank? && !@room.photos.blank? && !@room.address.blank? %>
+    $('#publish_button').attr('disabled', false);
+<% else %>
+    $('#publish_button').attr('disabled', true);
+<% end %>

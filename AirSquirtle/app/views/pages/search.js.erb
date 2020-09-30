@@ -1,0 +1,7 @@
+/* jquery used inside search.html
+ * what it does: instead of refreshing the whole page with every search from more filters, 
+ * it will just render the rooms_list file and not the whole search.html.erb page
+ * (just the part with the rooms of the page and the google maps)
+ * this way it's much faster than rendering the whole page every single time */
+$('#room_listing').html('<%= j render partial: "rooms/rooms_list", locals: {rooms: @arrRooms}  %>')
+initialize(<%= raw @arrRooms.to_json  %>)

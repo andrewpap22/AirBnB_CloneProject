@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>AirSquirtle</title>
+  <%= csrf_meta_tags %>
+
+  <%= action_cable_meta_tag %> <!-- action cable configuration step3 -->
+  <!-- step2, was in development.rb and step1 in routes.rb -->
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <!-- custom google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+  <!-- font awesome icons cdn -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- favicon -->
+  <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA////AP/ObABdPwAAm2kAAP/CSADwqgAA/9qQAP+2JAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMwAAAAAAAAA2MAAAAAAAA2UwAAAAAARGJTAAAAAAADM0QwAAAAAAAAdGMAAAAAAAA1ZAAAAAAAADVGMAAAAAAAdUIwAzMABDdUiDADRzMzZUYmMANjVVNmZYQAADAURGUigwAANmZiJ3KEAAADRoiIhmZDAAADRERDAAD/nwAA/48AAP8PAAD8DwAA/gcAAP/DAAD/wwAA/8EAAP/BAACOAQAAgAEAAIADAADAAwAAwAMAAOAAAAD4DwAA" rel="icon" type="image/x-icon" />
+
+  <!-- jQuery-UI for the datepicker -->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/excite-bike/jquery-ui.css">
+</head>
+
+<body>
+
+  <%= render 'shared/navbar' %> <!-- Rendering the navbar.html.erb file so we can use it here in the application -->
+  <%= render 'shared/message' %>
+
+  <% if current_user %>
+      <input type="hidden" id="user_id" value="<%= current_user.id %>">
+  <% end %>
+
+  <div class="container">
+    <%= yield %>
+  </div>
+
+  <%= render 'shared/footer' %>
+
+</body>
+
+</html>

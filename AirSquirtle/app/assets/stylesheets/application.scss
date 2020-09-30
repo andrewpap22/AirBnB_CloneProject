@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+@import "toastr";
+@import "fullcalendar";
+
+body{
+  color: #565a5c;
+  background-color: #f8f8f8;
+  font-family: "Varela Round", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+a {
+  color: #00a699;
+}
+
+.container{
+  width: 80%;
+}
+
+.text-babu, .icon-babu {
+  color: #00a699;
+}
+
+
+//navbars
+.navbar-default {
+  background-color: #ffffff;
+}
+
+.navbar-default .navbar-brand {
+  color: rgb(34, 221, 221);
+  font-size: 2em;
+  font-weight: 400;
+}
+
+
+//buttons
+.btn-block {
+  display: block;
+  white-space: normal;
+  width: 100%;
+}
+
+.btn {
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 9px 27px;
+}
+
+.btn-small {
+  padding: 5px 15px;
+  margin-top: 15px;
+}
+
+.btn:hover, .btn:focus {
+  color: #fff;
+}
+
+.btn.btn-default {
+  width: 100%;
+  border-color: #c4c4c4;
+  background: white;
+  color: #484848;
+  border-radius: 2px;
+  padding: 10px 0;
+  margin-top: 10px;
+}
+
+//normal btns
+
+.btn.btn-normal {
+  border: 1px solid #1ec2c2;
+  background-color: #1ec2c2;
+}
+
+.btn.btn-normal:active {
+  outline: none;
+  border-color: #e00007;
+  background-color: #e00007;
+}
+
+//form btn
+
+.btn.btn-form {
+  border: 1px solid #00a699;
+  background-color: #00a699;
+}
+
+.btn.btn-form:active {
+  outline: none;
+  border-color: #066165;
+  background-color: #066165;
+}
+
+//facebook btn
+
+.btn.btn-facebook {
+  border: 1px solid #3b5998;
+  background-color: #3b5998;
+}
+
+.btn.btn-facebook:active {
+  outline: none;
+  border-color: #2d467b;
+  background-color: #2d467b;
+}
+
+// PANELS
+.panel-default .panel-heading {
+  color: #ffffff;
+  background-color: #06a9f5;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.row-space-1 {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.row-space-2 {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.row-space-3 {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.description {
+  color: #575757;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 25px;
+}
+
+//avatars
+.avatar-small {
+  width: 28px;
+}
+
+.avatar-medium {
+  width: 48px;
+}
+
+.avatar-large {
+  width: 68px;
+}
+
+.avatar-full {
+  width: 100%;
+}
+
+// Forms 
+.form-group {
+  margin-bottom: 25px;
+
+}
+
+.form-control {
+  border-radius: 2px;
+  height: 4rem;
+}
+
+.form-group input {
+  height: 45px;
+  border: 1px solid #00a699;
+}
+
+.form-group textarea {
+  border: 1px solid #00a699;
+}
+
+.form-group select {
+  width: 100%;
+  color: #565a5c;
+  background-color: white;
+  border: 1px solid #00a699;
+  border-radius: 2px;
+  padding: 10px;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+.select:before {
+  content: '\25bc';
+  font-size: 1.2em;
+  position: absolute;
+  color: #00a699;
+  top: 35px;
+  right: 30px;
+  transform: scale(0.94, 0.62);
+}
+
+.form-group input[type="checkbox"] {
+  height: 1.25em;
+  width: 1.25em;
+  margin-bottom: -0.25em;
+  margin-right: 5px;
+  vertical-align: top;
+  border: 1px solid #00a699;
+  border-radius: 2px;
+  /* the below 3 lines do the same thing, but different browsers accept different commands. 
+   * what they do: the appearance property is used to display an element using a platforms native styling based on the
+   * users operating system. That means, if you open the website on safari for example, the visualization 
+   * would be different from the one on firefox or chrome. So what we do here with thse 3 lines is, have the same
+   * appearance on all platforms/browsers. */
+  appearance: none;
+  -moz-appearance: none; //this is for firefox
+  -webkit-appearance: none; //this is for safari & chrome
+}
+
+.form-group input[type="checkbox"]:checked:before {
+  content: '\2713';
+  position: absolute;
+  font-size: 0.95em;
+  text-align: center;
+  width: 1.25em;
+  color: #00a699;
+}
+
+// Sidebar
+.sidebar-list {
+  padding-left: 0;
+  list-style: none;
+}
+
+.sidebar-item {
+  padding: 10px 0;
+  font-size: 16px;
+  color: #82888a;
+}
+
+.sidebar-link {
+  color: #82888a;
+  text-decoration: none;
+}
+
+.sidebar-link:hover, .sidebar-link:focus {
+  color: #cacccd;
+  text-decoration: none;
+}
+
+.active.sidebar-link {
+  color: #565a5c;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+//photos upload
+
+.btn-file {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-file input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 100px;
+  text-align: right;
+  filter: alpha(opacity = 0);
+  opacity: 0;
+  outline: none;
+  background: white;
+  cursor: inherit;
+  display: block;
+}
+
+.panel-heading.preview {
+  padding: 0;
+}
+
+.panel-heading.preview img {
+  width: 100%;
+}
+
+// Room show
+.amenities li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  list-style-type: none;
+}
+
+.amenities .text-line-through {
+  text-decoration: line-through;
+  color: rgba(0,0,0,0.45);
+  font-size: 14px;
+}
+
+// reservations
+
+.reservation-table td {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #dce030;
+  padding: 10px;
+}
+
+.reservation-table .total td {
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+}
+
+.form-control.datepicker {
+  color: #00a699;
+  background-color: white;
+  border: 1px solid #00a699;
+  text-align: center;
+}
+
+.message-alert {
+  color: #d43242;
+  font-size: 14px;
+  padding-top: 10px;
+}
+
+// Search
+#main {
+  height: 100%;
+  overflow: hidden;
+}
+
+#left {
+  padding: 10px 400px 10px 20px;
+  overflow: scroll;
+  height: 100%;
+}
+
+#right {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 450px;
+  height: 100%;
+}
+
+.map_price {
+  text-align-last: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #00a699;
+}
+
+//Home page text brand color
+
+.text-aqua {
+  color: rgb(34, 221, 221);
+}
+
+// home page overall
+
+.discovery-card {
+  background-size: cover;
+  background-position: center;
+  height: 326px;
+}
+
+.banner {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+// footer
+.bottom-container
+{
+  padding: 50px 0 20px;
+  background-color: #ffffff;
+}
+
+.copyright
+{
+  color: rgb(34, 221, 221);
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+  padding: 20px 0;
+}
+
+// Calendar
+.fc-content.Waiting {
+  background-color: #C9CC60;
+}
+.fc-past {
+  background-color: lightgray;
+}
+
+.fc-day {
+  position: relative;
+}
+
+.fc-content {
+  background-color: #00A699;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.fc-event {
+  border: 0px;
+  background-color: transparent;
+}
+
+.fc-title {
+  font-size: 14px;
+  position: relative;
+  top: 7px;
+  left: 20px;
+}
+
+.day-price {
+  position: absolute;
+  color: #EAA90B;
+  bottom: 2px;
+  right: 2px;
+}
+
+//notifications navbar 
+
+.badge {
+  background-color: #FF5A5F;
+  position: relative;
+  top: -15px;
+  left: -5px;
+}
